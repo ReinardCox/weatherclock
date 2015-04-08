@@ -105,6 +105,13 @@ public class Main {
                 terminal.write(CalendarPrinter.printMonthCalendar(cal).get(i));
                 y++;
             }
+
+            // check for daylight savings time
+            if(DST.isDST(DateTime.parseDate(date))){
+                terminal.write("Today is DST");
+            }else{
+                terminal.write("Today is not DST");
+            }
         }
     }
 }
