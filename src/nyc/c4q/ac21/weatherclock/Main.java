@@ -112,6 +112,12 @@ public class Main {
             }else{
                 terminal.write("Today is not DST");
             }
+
+            // Display Weather stats
+            terminal.moveTo(y, xPosition/2);
+            System.out.println("Humidity: " + WeatherStats.getHumidity());
+            terminal.moveTo(y-2, xPosition/2);
+            System.out.println("Temperature: " + WeatherStats.getTemperature());
         }
     }
 }
