@@ -96,6 +96,15 @@ public class Main {
 
             // Pause for one second, and do it again.
             DateTime.pause(1.0);
+
+            int y = 10;
+
+
+            for (int i = 0; i < CalendarPrinter.printMonthCalendar(cal).size(); i++) {
+                terminal.moveTo(y,xPosition);
+                terminal.write(CalendarPrinter.printMonthCalendar(cal).get(i));
+                y++;
+            }
         }
     }
 }
